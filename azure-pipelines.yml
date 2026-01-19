@@ -20,3 +20,9 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+- task: AzureWebApp@1
+  displayName: 'Deploy to Azure App Service'
+  inputs:
+    azureSubscription: 'YOUR-SERVICE-CONNECTION-NAME'
+    appName: 'my-azure'
+    package: '$(System.DefaultWorkingDirectory)/build'
