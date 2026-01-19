@@ -16,8 +16,9 @@ steps:
   displayName: 'Install and build'
 
 - task: AzureWebApp@1
-  displayName: 'Deploy to Azure App Service'
+  displayName: Deploy React build to Azure App Service
   inputs:
     azureSubscription: 'yt-clone'
     appName: 'my-azure'
     package: '$(System.DefaultWorkingDirectory)/build'
+
